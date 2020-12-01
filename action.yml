@@ -12,3 +12,5 @@ inputs:
     description: 'base64 encoded .kube/config'
   version:
     description: 'relase version'
+  jobname:
+    description: 'replace job name'
