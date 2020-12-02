@@ -14,3 +14,6 @@ inputs:
     description: 'relase version'
   jobname:
     description: 'replace job name'
+  namespace:
+    description: 'name space'
+    
