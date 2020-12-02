@@ -13,5 +13,6 @@ echo "kubectl delete job -n $INPUT_NAMESPACE $INPUT_JOBNAME"
 sh -c "kubectl delete job -n $INPUT_NAMESPACE $INPUT_JOBNAME"
 set -e
 
-echo "kubectl apply -n $INPUT_NAMESPACE -f $*"
-sh -c "kubectl apply -n $INPUT_NAMESPACE -f $*"
+echo 'hello workflow'
+# echo "kubectl apply -n $INPUT_NAMESPACE -f $*"
+# sh -c "kubectl apply -n $INPUT_NAMESPACE -f $*"
