@@ -9,7 +9,9 @@ echo $INPUT_KUBECONFIG | base64 -d > ~/.kube/config
 sed -i "s/v1.0/$INPUT_VERSION/g" $*
 
 set +e
+echo "kubectl delete job -n $INPUT_NAMESPACE $INPUT_JOBNAME"
 sh -c "kubectl delete job -n $INPUT_NAMESPACE $INPUT_JOBNAME"
 set -e
 
+echo "kubectl apply -n $INPUT_NAMESPACE -f $*"
 sh -c "kubectl apply -n $INPUT_NAMESPACE -f $*"
